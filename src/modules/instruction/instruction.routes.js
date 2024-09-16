@@ -10,5 +10,4 @@ instructionRoutes
     .put('/update/:instructionId', instructionController.updateInstruction)
     .delete('/delete/:instructionId', instructionController.deleteInstruction)
 
-
 export default instructionRoutes

@@ -10,5 +10,4 @@ spiceRoutes
     .put('/update/:spiceId', spiceController.updateSpice)
     .delete('/delete/:spiceId', spiceController.deleteSpice)
 
-
 export default spiceRoutes

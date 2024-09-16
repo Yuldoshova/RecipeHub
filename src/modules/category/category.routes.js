@@ -11,5 +11,4 @@ categoryRoutes
     .put('/update/:categoryId', categoryController.updateCategory)
     .delete('/delete/:categoryId', categoryController.deleteCategory)
 
-
 export default categoryRoutes
