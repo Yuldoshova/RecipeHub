@@ -20,13 +20,13 @@ export class CategoryController {
         const { name, description } = req.body
         const image_url = req.file.filename
 
-        const newcategory = await this.#_model.create({
+        const newCategory = await this.#_model.create({
             name, description, image_url
         })
 
         res.status(201).send({
             message: "Successfully created!✅",
-            data: newcategory
+            data: newCategory
         })
     }
 
