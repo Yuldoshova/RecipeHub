@@ -2,6 +2,7 @@ import { Router } from "express";
 import equipmentRoutes from "../modules/equipment/equipment.routes.js";
 import spiceRoutes from "../modules/spice/spice.routes.js";
 import categoryRoutes from "../modules/category/category.routes.js";
+import instructionRoutes from "../modules/instruction/instruction.routes.js";
 
 export const routes = Router()
 
@@ -10,7 +11,7 @@ export const routes = Router()
 // routes.use('/recipes',)
 routes.use('/equipments', equipmentRoutes)
 routes.use('/spices', spiceRoutes)
-// routes.use('/instructions',)
+routes.use('/instructions', instructionRoutes)
 // routes.use('/ingredients',)
 routes.use('/categories', categoryRoutes)
 // routes.use('/comment',)

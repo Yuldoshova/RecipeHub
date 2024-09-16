@@ -18,6 +18,8 @@ const categorySchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Recipe'
     }]
+}, {
+    collection: "categories"
 })
 
 export const Category = model('Category', categorySchema)
