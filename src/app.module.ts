@@ -22,6 +22,7 @@ import { CategoryModule } from './modules/category/category.module';
         password: configService.get<string>('dbConfig.password'),
         database: configService.get<string>('dbConfig.dbName'),
         entites: [Category],
+        autoLoadEntities:true,
         synchronize: true,
       }),
       inject: [ConfigService]

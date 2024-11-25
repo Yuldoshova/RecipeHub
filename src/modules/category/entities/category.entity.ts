@@ -9,7 +9,7 @@ export class Category {
     @Column({ name: "name", type: "varchar", unique: true, length: 100, nullable: false })
     name: string
 
-    @Column({ name: "description", type: "text", length: 500, nullable: true })
+    @Column({ name: "description", type: "text", nullable: true })
     description: string
 
     @Column({ name: "image_url", type: "varchar", nullable: true })
