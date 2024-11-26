@@ -5,6 +5,8 @@ import { appConfig } from './config/app.config';
 import { dbConfig } from './config/database.config';
 import { Category } from './modules/category/entities/category.entity';
 import { CategoryModule } from './modules/category/category.module';
+import { UserModule } from './modules/user/user.module';
+import { User } from './modules/user/entities/user.entity';
 
 @Module({
   imports: [
@@ -21,13 +23,14 @@ import { CategoryModule } from './modules/category/category.module';
         username: configService.get<string>('dbConfig.user'),
         password: configService.get<string>('dbConfig.password'),
         database: configService.get<string>('dbConfig.dbName'),
-        entites: [Category],
+        entites: [Category, User],
         autoLoadEntities:true,
         synchronize: true,
       }),
       inject: [ConfigService]
     }),
-    CategoryModule
+    CategoryModule,
+    UserModule
   ],
 })
 export class AppModule { }
