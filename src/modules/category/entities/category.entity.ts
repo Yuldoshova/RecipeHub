@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Recipe } from "src/modules/recipe/entities/recipe.entity";
+import { Column, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({ name: "categories" })
 export class Category {
@@ -14,4 +15,8 @@ export class Category {
 
     @Column({ name: "image_url", type: "varchar", nullable: true })
     imageUrl: string
+
+    @ManyToMany(() => Recipe, (recipe) => recipe.categories, { cascade: true })
+    @JoinTable()
+    recipes: Recipe[]
 }

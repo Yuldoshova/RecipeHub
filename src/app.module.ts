@@ -7,6 +7,7 @@ import { Category } from './modules/category/entities/category.entity';
 import { CategoryModule } from './modules/category/category.module';
 import { UserModule } from './modules/user/user.module';
 import { User } from './modules/user/entities/user.entity';
+import { RecipeModule } from './recipe/recipe.module';
 
 @Module({
   imports: [
@@ -30,7 +31,8 @@ import { User } from './modules/user/entities/user.entity';
       inject: [ConfigService]
     }),
     CategoryModule,
-    UserModule
+    UserModule,
+    RecipeModule
   ],
 })
 export class AppModule { }
